@@ -404,7 +404,7 @@ func (c *WebContext2D) LineJoin() LineJoin {
 }
 
 func (c *WebContext2D) SetLineDash(dash []float64) {
-	ar, _ := jsutil.SliceToTypedArray(dash)
+	ar := jsutil.SliceToTypedArray(dash)
 	c.ctx2d.Call("setLineDash", ar)
 }
 

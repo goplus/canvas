@@ -1,3 +1,4 @@
+//go:build ignore
 // +build ignore
 
 // Copyright 2010 The draw2d Authors. All rights reserved.

@@ -1,3 +1,4 @@
+//go:build nofont
 // +build nofont
 
 package canvas

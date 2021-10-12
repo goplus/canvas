@@ -1,3 +1,4 @@
+//go:build nofont || wx
 // +build nofont wx
 
 package canvas

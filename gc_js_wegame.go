@@ -1,3 +1,4 @@
+//go:build wegame
 // +build wegame
 
 package canvas

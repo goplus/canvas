@@ -19,7 +19,7 @@ func NewWebContext2D(width, height int) Context2D {
 
 func (c *WebContext2D) SetImage(img image.Image, dx float64, dy float64) {
 	nrgba := imageToNRGBA(img)
-	data, _ := jsutil.SliceToTypedArray(nrgba.Pix)
+	data := jsutil.SliceToTypedArray(nrgba.Pix)
 	imdata := c.ctx2d.Call("createImageData", nrgba.Rect.Dx(), nrgba.Rect.Dy())
 	imdata.Get("data").Call("set", data)
 	c.ctx2d.Call("putImageData", imdata, dx, dy)

@@ -16,7 +16,7 @@ func NewWebContext2D(width, height int) Context2D {
 
 func (c *WebContext2D) SetImage(img image.Image, dx float64, dy float64) {
 	rgba := imageToNRGBA(img)
-	data, _ := jsutil.SliceToTypedArray(rgba.Pix)
+	data := jsutil.SliceToTypedArray(rgba.Pix)
 	//p2 := jsId.Invoke(rgba.Pix)
 	//data := js.Global.Get("Uint8ClampedArray").New(4 * img.Bounds().Dx() * img.Bounds().Dy())
 	//jsCopy.Invoke(data, p2)
